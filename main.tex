@@ -1,0 +1,62 @@
+\documentclass[nohyper,nobib,a4paper]{tufte-book}
+
+% All the imports
+\input{_head}
+
+% Literatura, rozbita na trzy zakresy.
+\addbibresource{cykl.bib}
+\addbibresource{bibliography.bib}
+\addbibresource{external.bib}
+
+\usepackage{pdfpages}
+
+\begin{document}
+
+
+% Front matter
+\frontmatter
+
+\mainmatter
+
+
+\input{00_colo.tex}
+
+%\blankpage
+\input{01_wniosek}
+
+%\blankpage
+\input{02_dane_wnioskodawcy}
+	
+\chapter{Kopia dokumentu potwierdzającego posiadanie stopnia doktora}
+
+\noindent Skan dyplomu poświadczającego uzyskanie stopnia naukowego doktora w dziedzinie nauk technicznych w dyscyplinie naukowej informatyka nadany uchwałą Rady Wydziału Elektroniki Politechniki Wrocławskiej z dnia 21 czerwca 2017 r.
+%\blankpage
+\thispagestyle{empty}
+%\blankpage
+\includepdf[pages=-]{zal/DYPLOM.pdf}
+
+\thispagestyle{empty}
+%\cleardoublepage
+\input{03_autoreferat}
+\input{04_istotna_aktywnosc}
+\input{05_dydaktyka_i_popularyzacja}
+
+\input{10_wykaz_osiagniec}
+
+\input{11_ending}
+
+%%
+% The back matter contains appendices, bibliographies, indices, glossaries, etc.
+
+\backmatter
+
+%\bibliography{sample-handout}
+%\bibliographystyle{plainnat}
+
+%\bibliography{bibliography}
+%\bibliographystyle{plainnat}
+
+%\printindex
+
+
+\end{document}
